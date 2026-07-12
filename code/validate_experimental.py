@@ -6,7 +6,10 @@ import numpy as np
 import pandas as pd
 import win32com.client
 
-CLEAN_APW = Path(r"")
+HERE = Path(__file__).resolve().parent          # .../code
+ROOT = HERE.parent                               # repo root
+CLEAN_APW = ROOT / "simulation" / "TRM_automation_no_S1.apw"
+DATA_CSV  = ROOT / "data" / "added2.csv"
 FEED_T_C, FEED_P_BAR, FEED_CH4 = 500.0, 1.0, 1.0
 TIMEOUT_S = 120.0
 
