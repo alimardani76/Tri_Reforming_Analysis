@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 # --- EDIT ONLY IF FILENAME DIFFERS ---
-ROOT = Path(r"C:\Users\KaraPardazesh\Desktop\IHEJ")
+ROOT = Path(r"")
 CLEAN_APW = ROOT / "simulation" / "TRM_automation_no_S1.apw"
 DATA_CSV = ROOT / "data" / "added2.csv"
 
