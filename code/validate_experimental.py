@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import win32com.client
 
-CLEAN_APW = Path(r"C:\Users\KaraPardazesh\Desktop\Review\simulation\TRM_automation_no_S1.apw")
+CLEAN_APW = Path(r"")
 FEED_T_C, FEED_P_BAR, FEED_CH4 = 500.0, 1.0, 1.0
 TIMEOUT_S = 120.0
 
