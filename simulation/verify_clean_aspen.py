@@ -11,10 +11,11 @@ import traceback
 import numpy as np
 import pandas as pd
 
-# --- EDIT ONLY IF FILENAME DIFFERS ---
-ROOT = Path(r"")
-CLEAN_APW = ROOT / "simulation" / "TRM_automation_no_S1.apw"
-DATA_CSV = ROOT / "data" / "added2.csv"
+# --- paths resolve relative to this script; no manual editing needed ---
+HERE = Path(__file__).resolve().parent           # .../simulation
+ROOT = HERE.parent                                # repo root
+CLEAN_APW = HERE / "TRM_automation_no_S1.apw"     # same folder
+DATA_CSV  = ROOT / "data" / "added2.csv"
 
 FEED_T_C = 500.0
 FEED_P_BAR = 1.0
