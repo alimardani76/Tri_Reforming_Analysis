@@ -127,3 +127,49 @@ ML pipeline itself runs entirely from data/added2.csv and does not need Aspen.
 added2.csv columns:
 `T, P, Fw, Fc, Fo, FCH4, FH2O, FCO2, FCO, FH2, FCARBON, Q`
 (five inputs, then seven normalized outputs per mole of inlet CH4).
+
+
+---
+
+## September 2026 reviewer-verification workflow
+
+The second-round review added explicit physical and surrogate-verification checks.
+The corresponding scripts are kept separately so that the original analysis code
+remains intact.
+
+### Revision scripts
+
+- `code/revision_r2/rerun_five_scenarios_and_weight_sensitivity.py` reloads the
+  frozen ANN, reruns the five manuscript scenarios with the final GA settings,
+  and performs normalized one-at-a-time objective-weight sensitivity.
+- `code/revision_r2/carbon_boundary_check.py` evaluates the held-out Aspen
+  carbon/no-carbon boundary and false-carbon-free rate without using the former
+  0.2 descriptive threshold.
+- `simulation/verify_elemental_aspen.py` directly re-evaluates the five
+  ANN-selected optima in Aspen Plus and checks C/H/O atom closure.
+- `simulation/verify_weight_sensitivity_aspen.py` directly re-evaluates the
+  eleven normalized weight-sensitivity optima in Aspen Plus.
+- `simulation/co2_carbon_sweep.py` performs the controlled 15-point Aspen sweep
+  used to separate the direct CO2-feed equilibrium response from the global
+  SHAP association.
+- `simulation/literature_coke_trend_check.py` performs the controlled steam and
+  oxygen sweeps used only as a qualitative directional comparison with
+  independent experimental TRM coke trends.
+
+Suggested reproduction order from the repository root:
+
+    python code/revision_r2/rerun_five_scenarios_and_weight_sensitivity.py
+    python simulation/verify_elemental_aspen.py
+    python simulation/verify_weight_sensitivity_aspen.py
+    python code/revision_r2/carbon_boundary_check.py
+    python simulation/co2_carbon_sweep.py
+    python simulation/literature_coke_trend_check.py
+
+The Aspen scripts require Windows, Aspen Plus, and `pywin32`. The ANN revision
+scripts expect the frozen revision artifacts `ann_optimization_results/ann.keras`
+and `ann_optimization_results/scalers.pkl` from the revision workspace. These
+binary artifacts are not tracked here; the compact numerical audit outputs used
+in the revision are retained under `results/revision_r2/`.
+
+An elemental-balance `PASS` means atom closure of the extracted Aspen solution;
+it is not, by itself, a version-independent Aspen solver-convergence flag.
