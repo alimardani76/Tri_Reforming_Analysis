@@ -1,0 +1,4 @@
+# Local/generated ANN revision workspace
+ann_optimization_results/*
+!ann_optimization_results/ann.keras
+!ann_optimization_results/scalers.pkl

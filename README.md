@@ -25,7 +25,8 @@ paper is regenerated from committed code and data.
     ├── data/
     │   └── added2.csv                 # 46,464-point equilibrium dataset
     ├── code/
-    │   ├── train_and_opt.py           # model training + GA + sensitivity
+    │   ├── revision_r2/               # canonical final-revision verification scripts
+    │   ├── legacy/                    # historical optimization scripts; provenance only
     │   ├── permutation.py             # carbon-specific permutation importance (Fig 8)
     │   ├── metrics_only.py            # RMSE / MAE table
     │   ├── carbon_strata.py           # regime-stratified carbon error
@@ -51,17 +52,38 @@ installation, and pywin32:
 
     pip install pywin32
 
-## Reproducing the ML results
+## Reproducing the final R2 ML results
 
-All ML scripts read `data/added2.csv` and use a fixed seed (42). From `code/`:
+The final revised optimization and carbon-boundary results use the frozen ANN
+artifacts committed in:
 
-    python train_and_opt.py        # models, GA, sensitivity table, CV CSVs
-    python metrics_only.py         # RMSE / MAE
-    python permutation.py          # Fig 8 + carbon importances
-    python carbon_strata.py        # stratified carbon error
-    python noise_robustness.py     # noise degradation table
-    python shap_carbon_direction.py
-    python regen_fig1.py           # (and regen_fig4_overlay / 5 / 6 / 9 / 10)
+- `ann_optimization_results/ann.keras`
+- `ann_optimization_results/scalers.pkl`
+
+The 46,464-point `data/added2.csv` dataset is treated as immutable. No retraining
+or regeneration of that dataset is required for the final R2 verification.
+
+From the repository root, run:
+
+    python code/revision_r2/rerun_five_scenarios_and_weight_sensitivity.py
+    python code/revision_r2/carbon_boundary_check.py
+    python code/revision_r2/carbon_boundary_tolerance_check.py
+
+The first script reruns the five manuscript optimization scenarios and the
+normalized eleven-case one-at-a-time weight sensitivity using the final GA
+settings. The second reproduces the exact held-out carbon/no-carbon audit. The
+third keeps the Aspen truth definition fixed at `FCARBON > 0` and checks ANN
+decision thresholds of 0, 1e-6, 1e-4, and 1e-3.
+
+The historical `code/legacy/train_and_opt.py` and `code/legacy/train_opt.py`
+files are retained only for provenance and are not part of the final R2
+reproduction path.
+
+The remaining analysis and figure scripts (`metrics_only.py`, `permutation.py`,
+`carbon_strata.py`, `noise_robustness.py`, SHAP scripts, and figure-regeneration
+scripts) reproduce the corresponding original manuscript analyses from
+`data/added2.csv`.
+
 
 ---
 
@@ -144,6 +166,9 @@ remains intact.
 - `code/revision_r2/carbon_boundary_check.py` evaluates the held-out Aspen
   carbon/no-carbon boundary and false-carbon-free rate without using the former
   0.2 descriptive threshold.
+- `code/revision_r2/carbon_boundary_tolerance_check.py` repeats the boundary
+  classification with ANN thresholds of 0, 1e-6, 1e-4, and 1e-3 while keeping
+  the Aspen physical reference fixed at `FCARBON > 0`.
 - `simulation/verify_elemental_aspen.py` directly re-evaluates the five
   ANN-selected optima in Aspen Plus and checks C/H/O atom closure.
 - `simulation/verify_weight_sensitivity_aspen.py` directly re-evaluates the
@@ -158,17 +183,18 @@ remains intact.
 Suggested reproduction order from the repository root:
 
     python code/revision_r2/rerun_five_scenarios_and_weight_sensitivity.py
+    python code/revision_r2/carbon_boundary_check.py
+    python code/revision_r2/carbon_boundary_tolerance_check.py
     python simulation/verify_elemental_aspen.py
     python simulation/verify_weight_sensitivity_aspen.py
-    python code/revision_r2/carbon_boundary_check.py
     python simulation/co2_carbon_sweep.py
     python simulation/literature_coke_trend_check.py
 
 The Aspen scripts require Windows, Aspen Plus, and `pywin32`. The ANN revision
-scripts expect the frozen revision artifacts `ann_optimization_results/ann.keras`
-and `ann_optimization_results/scalers.pkl` from the revision workspace. These
-binary artifacts are not tracked here; the compact numerical audit outputs used
-in the revision are retained under `results/revision_r2/`.
+scripts use the frozen revision artifacts `ann_optimization_results/ann.keras`
+and `ann_optimization_results/scalers.pkl`, which are committed with the final
+R2 repository state. Compact numerical audit outputs used in the revision are
+retained under `results/revision_r2/`.
 
 An elemental-balance `PASS` means atom closure of the extracted Aspen solution;
 it is not, by itself, a version-independent Aspen solver-convergence flag.

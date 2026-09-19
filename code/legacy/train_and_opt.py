@@ -1,3 +1,7 @@
+# LEGACY / HISTORICAL SCRIPT — NOT THE FINAL R2 REPRODUCTION PATH.
+# Retained only for provenance. Use code/revision_r2/ scripts and the frozen
+# ann_optimization_results/ann.keras + scalers.pkl for the final revision.
+
 # ============================================================
 # TRM surrogate modeling + GA optimization + GA sensitivity
 # Single-file clean pipeline
