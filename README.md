@@ -131,9 +131,8 @@ added2.csv columns:
 
 ---
 
-## September 2026 reviewer-verification workflow
+## verification workflow
 
-The second-round review added explicit physical and surrogate-verification checks.
 The corresponding scripts are kept separately so that the original analysis code
 remains intact.
 
