@@ -1,0 +1,31 @@
+{
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\KaraPardazesh\\Desktop\\Tri_Reforming_Codex\\open_source_benchmark\\.venv\\Scripts\\python.exe",
+        "open_source_benchmark/run_benchmark.py",
+        "--cantera"
+      ],
+      "exit_code": 0,
+      "elapsed_wall_s": 4.668944800039753
+    },
+    {
+      "command": [
+        "C:\\Users\\KaraPardazesh\\Desktop\\Tri_Reforming_Codex\\open_source_benchmark\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "open_source_benchmark/tests",
+        "-v",
+        "--junitxml=open_source_benchmark/results/pytest.xml"
+      ],
+      "exit_code": 0,
+      "elapsed_wall_s": 3.531663700006902
+    }
+  ],
+  "pytest": {
+    "tests": 27,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

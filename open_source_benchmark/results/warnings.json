@@ -1,0 +1,102 @@
+[
+  {
+    "engine": "cantera",
+    "case_id": "grid-00996",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-00996",
+    "message": "ERROR: FAILURE its = 5001!"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-08740",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-08740",
+    "message": "ERROR: FAILURE its = 5001!"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-08861",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-08861",
+    "message": "ERROR: FAILURE its = 5001!"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-08982",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-08982",
+    "message": "ERROR: FAILURE its = 5001!"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09103",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09103",
+    "message": "ERROR: FAILURE its = 5001!"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09224",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09224",
+    "message": "ERROR: FAILURE its = 5001!"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09345",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09345",
+    "message": "ERROR: FAILURE its = 5001!"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09466",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09466",
+    "message": "ERROR: FAILURE its = 5001!"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09587",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-09587",
+    "message": "ERROR: FAILURE its = 5001!"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-13930",
+    "message": "VCS attempt failed; retrying fresh feed with Gibbs: \n*******************************************************************************\nCanteraError thrown by MultiPhase::equilibrate:\nVCS solver failed. Return code: -1\n*******************************************************************************\n"
+  },
+  {
+    "engine": "cantera",
+    "case_id": "grid-13930",
+    "message": "ERROR: FAILURE its = 5001!"
+  }
+]

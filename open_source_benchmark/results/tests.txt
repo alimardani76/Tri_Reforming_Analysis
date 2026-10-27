@@ -1,0 +1,40 @@
+Command arguments: ["C:\\Users\\KaraPardazesh\\Desktop\\Tri_Reforming_Codex\\open_source_benchmark\\.venv\\Scripts\\python.exe", "-m", "pytest", "open_source_benchmark/tests", "-v", "--junitxml=open_source_benchmark/results/pytest.xml"]
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-8.3.5, pluggy-1.7.0 -- C:\Users\KaraPardazesh\Desktop\Tri_Reforming_Codex\open_source_benchmark\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\KaraPardazesh\Desktop\Tri_Reforming_Codex\open_source_benchmark
+configfile: pytest.ini
+collecting ... collected 27 items
+
+open_source_benchmark\tests\test_equilibrium.py::test_solved_balance_bounds_and_graphite_kkt[case0] PASSED [  3%]
+open_source_benchmark\tests\test_equilibrium.py::test_solved_balance_bounds_and_graphite_kkt[case1] PASSED [  7%]
+open_source_benchmark\tests\test_equilibrium.py::test_solved_balance_bounds_and_graphite_kkt[case2] PASSED [ 11%]
+open_source_benchmark\tests\test_equilibrium.py::test_solved_balance_bounds_and_graphite_kkt[case3] PASSED [ 14%]
+open_source_benchmark\tests\test_equilibrium.py::test_solved_balance_bounds_and_graphite_kkt[case4] PASSED [ 18%]
+open_source_benchmark\tests\test_equilibrium.py::test_solved_balance_bounds_and_graphite_kkt[case5] PASSED [ 22%]
+open_source_benchmark\tests\test_equilibrium.py::test_graphite_enabled_and_absent_element_exact_zeros PASSED [ 25%]
+open_source_benchmark\tests\test_equilibrium.py::test_conversions_and_reference_pressure PASSED [ 29%]
+open_source_benchmark\tests\test_equilibrium.py::test_bad_inputs_rejected[case0] PASSED [ 33%]
+open_source_benchmark\tests\test_equilibrium.py::test_bad_inputs_rejected[case1] PASSED [ 37%]
+open_source_benchmark\tests\test_equilibrium.py::test_bad_inputs_rejected[case2] PASSED [ 40%]
+open_source_benchmark\tests\test_equilibrium.py::test_bad_inputs_rejected[case3] PASSED [ 44%]
+open_source_benchmark\tests\test_equilibrium.py::test_bad_inputs_rejected[case4] PASSED [ 48%]
+open_source_benchmark\tests\test_equilibrium.py::test_validator_detects_invalid_outputs PASSED [ 51%]
+open_source_benchmark\tests\test_equilibrium.py::test_feasible_perturbations_cannot_lower_gibbs PASSED [ 55%]
+open_source_benchmark\tests\test_equilibrium.py::test_nasa_polynomials_and_solid_pressure_match_cantera[773.15] PASSED [ 59%]
+open_source_benchmark\tests\test_equilibrium.py::test_nasa_polynomials_and_solid_pressure_match_cantera[999.99] PASSED [ 62%]
+open_source_benchmark\tests\test_equilibrium.py::test_nasa_polynomials_and_solid_pressure_match_cantera[1000.0] PASSED [ 66%]
+open_source_benchmark\tests\test_equilibrium.py::test_nasa_polynomials_and_solid_pressure_match_cantera[1000.01] PASSED [ 70%]
+open_source_benchmark\tests\test_equilibrium.py::test_nasa_polynomials_and_solid_pressure_match_cantera[1273.15] PASSED [ 74%]
+open_source_benchmark\tests\test_equilibrium.py::test_every_executed_prediction_is_balanced_and_nonnegative PASSED [ 77%]
+open_source_benchmark\tests\test_equilibrium.py::test_executed_engine_agreement PASSED [ 81%]
+open_source_benchmark\tests\test_evidence.py::test_sampling_determinism_strata_and_source_traceability PASSED [ 85%]
+open_source_benchmark\tests\test_evidence.py::test_reference_files_unchanged_from_recorded_hashes PASSED [ 88%]
+open_source_benchmark\tests\test_evidence.py::test_metrics_independently_recomputed_from_raw_rows PASSED [ 92%]
+open_source_benchmark\tests\test_evidence.py::test_confusion_recomputed_and_failed_cases_excluded PASSED [ 96%]
+open_source_benchmark\tests\test_evidence.py::test_execution_counts_and_fallback_records PASSED [100%]
+
+- generated xml file: C:\Users\KaraPardazesh\Desktop\Tri_Reforming_Codex\open_source_benchmark\results\pytest.xml -
+============================= 27 passed in 3.11s ==============================
+
+Exit code: 0

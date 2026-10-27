@@ -1,0 +1,13 @@
+temperature_band,pressure_band,carbon_positive,population_N,selected_N
+0,0,False,612,5
+0,0,True,7132,5
+0,1,False,718,5
+0,1,True,7026,5
+1,0,False,3767,5
+1,0,True,3977,5
+1,1,False,2373,5
+1,1,True,5371,5
+2,0,False,6337,5
+2,0,True,1407,5
+2,1,False,5909,5
+2,1,True,1835,5

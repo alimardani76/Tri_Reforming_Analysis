@@ -1,0 +1,129 @@
+{
+  "command": "python open_source_benchmark/run_benchmark.py --cantera",
+  "base_commit": "e4e49b3e95b06810dbbae3252728490aaef6678d",
+  "source_rows": 46464,
+  "grid_N": 88,
+  "optima_N": 5,
+  "exclusions": 0,
+  "cantera": "executed: 3.1.0",
+  "dwsim": "not executed; no configured executable/flowsheet",
+  "runtime": [
+    {
+      "engine": "cantera",
+      "cohort": "grid",
+      "attempted_N": 88,
+      "evaluated_N": 88,
+      "failed_N": 0,
+      "elapsed_s": 0.5176840000785887,
+      "median_case_s": 0.0028552500007208437,
+      "max_atom_residual": 8.849809773892048e-12
+    },
+    {
+      "engine": "cantera",
+      "cohort": "optima",
+      "attempted_N": 5,
+      "evaluated_N": 5,
+      "failed_N": 0,
+      "elapsed_s": 0.015184399962890893,
+      "median_case_s": 0.002901500032749027,
+      "max_atom_residual": 1.7763568394002505e-15
+    },
+    {
+      "engine": "scipy",
+      "cohort": "grid",
+      "attempted_N": 88,
+      "evaluated_N": 88,
+      "failed_N": 0,
+      "elapsed_s": 1.1892239999724552,
+      "median_case_s": 0.013038199977017939,
+      "max_atom_residual": 1.092459456231154e-13
+    },
+    {
+      "engine": "scipy",
+      "cohort": "optima",
+      "attempted_N": 5,
+      "evaluated_N": 5,
+      "failed_N": 0,
+      "elapsed_s": 0.0911758000147529,
+      "median_case_s": 0.014976599952206016,
+      "max_atom_residual": 9.769962616701378e-15
+    }
+  ],
+  "cross_engine_agreement": [
+    {
+      "output": "FCH4",
+      "N": 93,
+      "max_abs_difference": 2.839556922928921e-09
+    },
+    {
+      "output": "FH2O",
+      "N": 93,
+      "max_abs_difference": 4.895377214708674e-09
+    },
+    {
+      "output": "FCO2",
+      "N": 93,
+      "max_abs_difference": 2.2226773754852047e-09
+    },
+    {
+      "output": "FO2",
+      "N": 93,
+      "max_abs_difference": 4.241019547525221e-23
+    },
+    {
+      "output": "FCO",
+      "N": 93,
+      "max_abs_difference": 3.9387259009870945e-09
+    },
+    {
+      "output": "FH2",
+      "N": 93,
+      "max_abs_difference": 2.9998739048409107e-09
+    },
+    {
+      "output": "FCARBON",
+      "N": 93,
+      "max_abs_difference": 6.746208425223443e-09
+    }
+  ],
+  "warning_count": 20,
+  "cantera_fallback_N": 10,
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.3",
+    "pytest": "8.3.5"
+  },
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26220-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "processor_identifier": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "logical_cpus": 8
+  },
+  "source_sha256": {
+    "data/added2.csv": "e3b6d6696cf46f72df11b6fa2c0526e2c4848d205fafe7cc09a223b0731c2e61",
+    "results/revision_r2/aspen_results.csv": "a2e79fbc559ed757589162c4c5548a6021fd2aebb096dce0979115511f263133",
+    "open_source_benchmark/thermo.json": "fceba9969444dce67900a080c1f69911b7ff557f267d0198dc3f270e66f0867f"
+  },
+  "hash_normalization": "source_sha256 and implementation_sha256 normalize CRLF to LF; BOM retained",
+  "source_raw_sha256": {
+    "data/added2.csv": "b1f0a087089e58fdb918fcbe91aec5a430c39f179a9a93c0fcda3ed7f5c0e18a",
+    "results/revision_r2/aspen_results.csv": "ae6c733648986b0672ab4aaa70ac7b3633a5bc08853ec0a3da4724b843fe0047"
+  },
+  "implementation_sha256": {
+    "cases.py": "5f4bca2e3756bab968550c07a2a2b315e16c17ae23a0617586f402b0c20bdcc9",
+    "equilibrium.py": "f6b1743062288393fdc041c328b08050a06281e97791d16d612d4fb86c2675a7",
+    "make_figures.py": "d4c543dab2d6897f53659a09b7555ba583756391c8426be778ddd6eb68ccf9f7",
+    "prepare_thermo.py": "5fab2a179bf0aebfe53287c9f576c59c671327258775d6d30cac54031442af24",
+    "reporting.py": "d830a6bdc92c651ad0f0b47cd0f9197e36de58050a934eacfaa39138ae530fcb",
+    "run_benchmark.py": "c60154a9b2bd244ed0d5146c1c4a6a45fdc51c5a5a24145ee9b3956fade50d11",
+    "tests/conftest.py": "5304ee5bfdb9cac1d7288cf7ecfc7534e844cea22a8d4f3e2e41c78029a5d860",
+    "tests/test_equilibrium.py": "7a127a92a86162c82290d1ed4e694d5049d615d3718190e0b7e4bb58e7dbfbee",
+    "tests/test_evidence.py": "18363b631c4c19f206e109a570420324ba24951b62f9ffc3bce257a753df131f",
+    "verify.py": "3bb11a3543590445671a58a021acb1b58976ebdf2ef6b1b254e5805acd096fc5",
+    "write_report.py": "92465e66dd2718393cb7ab0b38dd68752e61e198f03423b19e936e99109a053a"
+  },
+  "elapsed_before_figures_s": 2.995914899976924
+}

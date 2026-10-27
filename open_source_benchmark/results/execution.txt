@@ -1,0 +1,5 @@
+Command arguments: ["C:\\Users\\KaraPardazesh\\Desktop\\Tri_Reforming_Codex\\open_source_benchmark\\.venv\\Scripts\\python.exe", "open_source_benchmark/run_benchmark.py", "--cantera"]
+scipy: 93/93 successful
+cantera: 93/93 successful
+
+Exit code: 0
