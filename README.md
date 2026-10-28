@@ -5,6 +5,8 @@ Code, data, figures, and Aspen-automation utilities for the manuscript:
 **"Explainable Machine Learning for Low-Emission Methane Tri-Reforming:
 Carbon Formation, Hydrogen Production, and Operating-Window Optimization"**
 
+International Journal of Hydrogen Energy link:
+https://doi.org/10.1016/j.ijhydene.2026.158010
 
 Yaghoubi, Mansouri, Alimardani, Fazeli, Asgari.
 
